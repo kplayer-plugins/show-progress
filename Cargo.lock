@@ -10,9 +10,9 @@ checksum = "1aab8fc367588b89dcee83ab0fd66b72b50b72fa1904d7095045ace2b0c81c35"
 
 [[package]]
 name = "kplayer-rust-wrap"
-version = "1.5.1"
+version = "1.5.0-rc1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cc50deb28130281a04af6ac1d223d66536309d88faf483435a49e4e96641bc2e"
+checksum = "209b0b435ce0d9315fbd22af5f78db4c20666f70bb96d247483ee27075f7c820"
 dependencies = [
  "protobuf",
 ]
