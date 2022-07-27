@@ -22,21 +22,25 @@ impl kplayer::plugin::BasePlugin for ShowProgress {
         let history_message = kplayer::get_history_message(
             kplayer::proto::keys::EventMessageAction::EVENT_MESSAGE_ACTION_RESOURCE_CHECKED,
         );
-        let value: serde_json::Value = serde_json::from_str(history_message.as_str()).unwrap();
-        let duration_str = value
-            .get("inputAttribute")
-            .unwrap()
-            .get("duration")
-            .unwrap()
-            .as_str()
-            .unwrap();
-        let duration_u64 = String::from(duration_str).parse::<u64>().unwrap();
-        let duration_format = format!(
-            "{:0>2}:{:0>2}:{:0>2}",
-            (duration_u64 / 3600) as i32,
-            (duration_u64 % 3600 / 60) as i32,
-            duration_u64 % 60
-        );
+
+        let mut duration_format = String::from("00:00:00");
+        if history_message != "history cannot be found" {
+            let value: serde_json::Value = serde_json::from_str(history_message.as_str()).unwrap();
+            let duration_str = value
+                .get("inputAttribute")
+                .unwrap()
+                .get("duration")
+                .unwrap()
+                .as_str()
+                .unwrap();
+            let duration_u64 = String::from(duration_str).parse::<u64>().unwrap();
+            duration_format = format!(
+                "{:0>2}:{:0>2}:{:0>2}",
+                (duration_u64 / 3600) as i32,
+                (duration_u64 % 3600 / 60) as i32,
+                duration_u64 % 60
+            );
+        }
 
         // set arg
         let mut args: Vec<std::string::String> = Vec::new();

@@ -13,5 +13,5 @@ opt-level = 3
 lto = true
 
 [dependencies]
-"kplayer-rust-wrap" = "1.5.6"
+"kplayer-rust-wrap" = "1.5.6-rc1"
 "serde_json" = "*"

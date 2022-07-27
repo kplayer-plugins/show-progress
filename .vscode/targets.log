@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Wed Jul 27 10:49:26 2022
+# Make data base, printed on Wed Jul 27 15:56:54 2022
 
 # Variables
 
@@ -43,6 +43,7 @@ MAKEFILE_LIST :=  Makefile
 # environment
 JAVA_HOME = /opt/local/zulu8.56.0.23-ca-jdk8.0.302-macosx_aarch64
 # environment
+ 
 __CFBundleIdentifier = com.microsoft.VSCodeInsiders
 # environment
 CGO_CFLAGS = -I/opt/local/zulu8.56.0.23-ca-jdk8.0.302-macosx_aarch64/include -I/opt/local/zulu8.56.0.23-ca-jdk8.0.302-macosx_aarch64/include/darwin
@@ -107,7 +108,7 @@ LC_TERMINAL = iTerm2
 # environment
 SHLVL = 3
 # environment
-TERM_SESSION_ID = w0t0p0:F4B7CB73-0853-4258-ACDD-3CA39C312B9C
+TERM_SESSION_ID = w0t0p0:46040E66-468F-4D9B-8C39-7A5121507CE1
 # default
 MAKE_VERSION := 3.81
 # environment
@@ -147,7 +148,7 @@ CGO_LDFLAGS = -L/opt/local/zulu8.56.0.23-ca-jdk8.0.302-macosx_aarch64/jre/lib/se
 # environment
 TERM_PROGRAM_VERSION = 3.4.15
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCodeInsiders.19047083.19047089.7EC1F198-B1E1-47CC-B5C9-06AC18DDA84E
+XPC_SERVICE_NAME = application.com.microsoft.VSCodeInsiders.19047083.19047089.7DEEEC26-33A0-4D74-9C40-DB302A9C47A1
 # environment
 LC_TERMINAL_VERSION = 3.4.15
 # automatic
@@ -155,7 +156,7 @@ LC_TERMINAL_VERSION = 3.4.15
 # automatic
 +F = $(notdir $+)
 # environment
-ITERM_SESSION_ID = w0t0p0:F4B7CB73-0853-4258-ACDD-3CA39C312B9C
+ITERM_SESSION_ID = w0t0p0:46040E66-468F-4D9B-8C39-7A5121507CE1
 # environment
 COLORFGBG = 15;0
 # environment
@@ -179,7 +180,6 @@ SECURITYSESSIONID = 186b2
 # default
 SUFFIXES := 
 # default
- 
 .INCLUDE_DIRS = /usr/local/include
 # environment
 MAKELEVEL := 0
@@ -198,9 +198,9 @@ VSCODE_PID = 45671
 
 # Directories
 
-# . (device 16777234, inode 1800533): 11 files, no impossibilities.
+# . (device 16777234, inode 1800533): 12 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -220,6 +220,7 @@ all:
 .PHONY: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
+ 
 #  File has not been updated.
 
 # Not a target:
@@ -280,6 +281,6 @@ src/lib.rs:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Jul 27 10:49:26 2022
+# Finished Make data base on Wed Jul 27 15:56:54 2022
 
  
