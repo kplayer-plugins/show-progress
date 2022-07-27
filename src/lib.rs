@@ -12,7 +12,7 @@ impl ShowProgress {
 
 impl kplayer::plugin::BasePlugin for ShowProgress {
     fn get_name(&self) -> String {
-        String::from("show-text")
+        String::from("show-progress")
     }
     fn get_args(
         &mut self,
@@ -23,9 +23,14 @@ impl kplayer::plugin::BasePlugin for ShowProgress {
             kplayer::proto::keys::EventMessageAction::EVENT_MESSAGE_ACTION_RESOURCE_CHECKED,
         );
         let value: serde_json::Value = serde_json::from_str(history_message.as_str()).unwrap();
-        let duration_str = value.get("duration").unwrap().as_str().unwrap();
+        let duration_str = value
+            .get("inputAttribute")
+            .unwrap()
+            .get("duration")
+            .unwrap()
+            .as_str()
+            .unwrap();
         let duration_u64 = String::from(duration_str).parse::<u64>().unwrap();
-
         let duration_format = format!(
             "{:0>2}:{:0>2}:{:0>2}",
             (duration_u64 / 3600) as i32,
@@ -89,7 +94,13 @@ impl kplayer::plugin::BasePlugin for ShowProgress {
             kplayer::proto::keys::EventMessageAction::EVENT_MESSAGE_ACTION_RESOURCE_CHECKED as i32;
         if action == start_value {
             let value: serde_json::Value = serde_json::from_str(body.as_str()).unwrap();
-            let duration_str = value.get("duration").unwrap().as_str().unwrap();
+            let duration_str = value
+                .get("inputAttribute")
+                .unwrap()
+                .get("duration")
+                .unwrap()
+                .as_str()
+                .unwrap();
             let duration_u64 = String::from(duration_str).parse::<u64>().unwrap();
             let duration_format = format!(
                 "{:0>2}:{:0>2}:{:0>2}",
